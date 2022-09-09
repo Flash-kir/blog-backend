@@ -1,17 +1,10 @@
-{% load static %}
-{% get_static_prefix as STATIC_PREFIX %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Remake Barber - Blog Details</title>
-	<link rel="icon" href="{{ STATIC_PREFIX }}img/favicon.png" type="image/png">
+{% extends 'base.html' %}
 
-  <link rel="stylesheet" href="{{ STATIC_PREFIX }}styles.min.css">
-</head>
-<body>
+{% block title %}
+<title>Remake Barber - Blog Details</title>
+{% endblock %}
+
+{% block content %}
   <!--================Header Menu Area =================-->
   <header class="header_area">
     <div class="main_menu">
@@ -216,5 +209,4 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   <!--================ End Footer Area =================-->
 
   <script src="{{ STATIC_PREFIX }}scripts.js"></script>
-</body>
-</html>
+{% endblock %}
